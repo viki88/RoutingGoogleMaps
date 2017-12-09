@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vikination.adbroutingexample.MapsActivity">
+
+    <LinearLayout
+        android:id="@+id/search_point_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fromText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From location point"
+            android:padding="16dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/black"
+            android:alpha="0.5"/>
+        <TextView
+            android:id="@+id/toText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To location point"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/distanceText"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="8dp"/>
+
+    <fragment
+        android:layout_below="@id/search_point_layout"
+        android:layout_above="@id/distanceText"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.vikination.adbroutingexample.MapsActivity" />
+
+</RelativeLayout>
